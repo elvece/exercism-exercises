@@ -1,0 +1,11 @@
+// on every year that is evenly divisible by 4
+//   except every year that is evenly divisible by 100
+//     unless the year is also evenly divisible by 400
+
+function isLeapYear(year){
+  //if year is divisible by 100, do nothing, false
+  //elseif the year is also divisible by 400, then true
+
+  //if the year is divisible by 4, which means if it is divisible by 4, the result will not produce a fraction
+
+}
