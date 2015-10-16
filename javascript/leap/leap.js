@@ -3,6 +3,9 @@
 //     unless the year is also evenly divisible by 400
 
 function isLeapYear(year){
+
+
+
   //if year is divisible by 100, do nothing, false
   //elseif the year is also divisible by 400, then true
   if (year % 100 === 0 && year % 400 === 0)
@@ -17,7 +20,8 @@ function isLeapYear(year){
 
   if (year % 4 === 0){
     return true;
-  }
+  } else
+  return false;
 }
 
 module.exports = isLeapYear;
