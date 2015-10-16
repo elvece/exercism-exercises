@@ -14,12 +14,12 @@ describe('Leap year', function() {
     expect(isLeapYear(1900)).toBe(false);
   });
 
-  xit('is reintroduced every 400 years to adjust another day', function() {
+  it('is reintroduced every 400 years to adjust another day', function() {
     expect(isLeapYear(2000)).toBe(true);
   });
 
   // Feel free to enable the following tests to check some more examples
-  xdescribe('Additional example of a leap year that', function () {
+  describe('Additional example of a leap year that', function () {
 
     it('is not a leap year', function () {
       expect(isLeapYear(1978)).toBe(false);
