@@ -10,9 +10,9 @@ function compute(originalStrand, mutatedStrand){
   var workingOriginal = originalStrand.split();
   var workingMutated = mutatedStrand.split();
 
-  for (var i = 0; i < originalStrand.length; i++) {
-    for (var j = 0; j < mutatedStrand.length; j++) {
-      if (mutatedStrand[j] !==     originalStrand[i])
+  for (var i = 0; i < workingOriginal.length; i++) {
+    for (var j = 0; j < workingMutated.length; j++) {
+      if (workingOriginal[i] !== workingMutated[j])
         counter ++;
     }
   }
