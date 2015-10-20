@@ -7,9 +7,10 @@ function compute(originalStrand, mutatedStrand){
   //return counter number
   var counter = 0;
   //splits into an array
-  var workingOriginal = originalStrand.split();
-  var workingMutated = mutatedStrand.split();
-
+  var workingOriginal = originalStrand.split("");
+  var workingMutated = mutatedStrand.split("");
+  console.log(workingOriginal);
+  console.log(workingMutated);
   for (var i = 0; i < workingOriginal.length; i++) {
     for (var j = 0; j < workingMutated.length; j++) {
       if (workingOriginal[i] !== workingMutated[j])
@@ -17,6 +18,7 @@ function compute(originalStrand, mutatedStrand){
     }
   }
   return counter;
+  console.log(counter);
 }
 
 module.exports = compute;
