@@ -1,3 +1,4 @@
+//use OOP?
 
 function compute(originalStrand, mutatedStrand){
   //split each string into an array
