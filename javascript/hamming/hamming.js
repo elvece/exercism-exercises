@@ -21,3 +21,4 @@ function compute(originalStrand, mutatedStrand){
 }
 
 module.exports = compute;
+//compare the length of each strands
