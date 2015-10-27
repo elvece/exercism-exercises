@@ -8,7 +8,7 @@ describe('Bob', function() {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('shouting', function() {
+  it('shouting', function() {
     var result = bob.hey('WATCH OUT!');
     expect(result).toEqual('Whoa, chill out!');
   });
@@ -55,7 +55,7 @@ describe('Bob', function() {
 
   xit('shouting with umlauts', function() {
     // NOTE: "\xfcML\xe4\xdcTS" === "üMLäÜTS"
-    var result = bob.hey('\xdcML\xc4\xdcTS!'); 
+    var result = bob.hey('\xdcML\xc4\xdcTS!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
