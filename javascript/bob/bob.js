@@ -12,10 +12,8 @@ Bob.prototype.hey = function(input) {
   //else whatever
   input = input.trim();
 
-  console.log((/^[A-Z]$/).test(input));
 
-  if ((/^[A-Z]$/).test(input)) {
-    console.log('hi')
+  if ((/(^.*[A-Z]{2,}.*$)/).test(input)) {
     return 'Whoa, chill out!';
   } else {
     return 'Whatever.';
