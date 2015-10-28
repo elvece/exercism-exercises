@@ -1,26 +1,14 @@
-//second iteration
+//third iteration
 function isLeapYear(year){
-  return ((year % 100 !== 0 && year % 4 === 0) || year % 400 === 0);
+  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
 }
+
+// had: 100, 4, 400
+// want: 4, 400, 100
 
 module.exports = isLeapYear;
 
 
-//first iteration
-// function isLeapYear(year){
-
-//   //if year is divisible by 100, do nothing, false
-//   //elseif the year is also divisible by 400, then true
-//   if (year % 100 === 0 && year % 400 === 0)
-//     return true;
-
-//   if (year % 100 === 0){
-//     return false;
-//   }
-
-//   //if the year is divisible by 4, the result will not produce a fraction
-//   if (year % 4 === 0){
-//     return true;
-//   } else
-//   return false;
-// }
+// on every year that is evenly divisible by 4
+//   except every year that is evenly divisible by 100
+//     unless the year is also evenly divisible by 400
