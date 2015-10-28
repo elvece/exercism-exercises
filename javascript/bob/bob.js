@@ -7,9 +7,13 @@ Bob.prototype.hey = function(input) {
   //if nothing, fine by that way
   //else whatever
 
-//input === input.toUpperCase() && input != input.toLowerCase()
+  //if two consecutive uppercase letters exist, yelling
+  //not going to work in instances of OK or DMV
+  // if ((/(^.*[A-Z]{2,}.*$)/).test(input)) {
+  //   return 'Whoa, chill out!';
+  // }
 
-  if ((/(^.*[A-Z]{2,}.*$)/).test(input)) {
+  if (input === input.toUpperCase() && input != input.toLowerCase()) {
     return 'Whoa, chill out!';
   }
 
