@@ -8,7 +8,7 @@ Bob.prototype.hey = function(input) {
     return 'Whoa, chill out!';
   }
 
-  //starts at end and sees if last character is question mark
+  //starts at last character of input and sees if it is a question mark
   if (input.slice(input.length - 1) === '?'){
     return 'Sure.';
   }
@@ -19,6 +19,7 @@ Bob.prototype.hey = function(input) {
     return 'Fine. Be that way!';
   }
 
+  //all other cases return whatever
   else {
     return 'Whatever.';
   }
