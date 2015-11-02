@@ -8,20 +8,18 @@ function words(input){
     word = word[0];
     result.word = 1;
     return result;
-  }
-  // console.log(result)
+  } else {
 
-  for (var i = 0; i < word.length; i++) {
-    if (word[i] === word[i + 1]){
-      result.word == word[i];
-      // word.value == ++
-      console.log(result)
-    };
+
+    for (var i = 0; i < word.length; i++) {
+      var count = result[word[i]] || 0;
+      count ++;
+      result[word[i]] = count;
+    }
+    return result;
   }
-  return result;
+
 
 }
-
-// words('test test test hey you there')
 
 module.exports = words;
