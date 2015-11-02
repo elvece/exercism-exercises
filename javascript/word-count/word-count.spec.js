@@ -16,7 +16,7 @@ describe('words()', function() {
     expect(words('one fish two fish red fish blue fish')).toEqual(expectedCounts);
   });
 
-  xit('includes punctuation', function() {
+  it('includes punctuation', function() {
     var expectedCounts = { car: 1, ':': 2, carpet: 1, as: 1, java: 1, 'javascript!!&@$%^&': 1 };
     expect(words('car : carpet as java : javascript!!&@$%^&')).toEqual(expectedCounts);
   });
