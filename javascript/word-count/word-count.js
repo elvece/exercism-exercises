@@ -7,12 +7,13 @@ function words(input){
   if(word.length <= 1){
     word = word[0];
     result.word = 1;
+    return result;
   }
   // console.log(result)
 
-  for (var i = 0; i < input.length; i++) {
-    if (input[i] === input[i + 1]){
-      result.input == input[i];
+  for (var i = 0; i < word.length; i++) {
+    if (word[i] === word[i + 1]){
+      result.word == word[i];
       // word.value == ++
       console.log(result)
     };
