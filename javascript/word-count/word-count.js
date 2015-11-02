@@ -1,8 +1,11 @@
+//iffy wrap
+(function() {
+  'use strict';
 
 function words(input){
   var result = {};
 
-  input = input.replace("\n", " ");
+  input = input.replace(/ +?/g, " ");
   var word = input.split(" ");
 
   // if(word.length <= 1){
@@ -21,3 +24,5 @@ function words(input){
 }
 
 module.exports = words;
+
+})();
