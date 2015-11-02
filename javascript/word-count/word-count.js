@@ -2,13 +2,13 @@
 function words(input){
   var result = {};
 
-  var word = input.split(" ");
+  var word = input.split(" ") || input.split("\n");
 
-  if(word.length <= 1){
-    word = word[0];
-    result.word = 1;
-    return result;
-  } else {
+  // if(word.length <= 1){
+  //   word = word[0];
+  //   result.word = 1;
+  //   return result;
+  // } else {
 
 
     for (var i = 0; i < word.length; i++) {
@@ -17,9 +17,6 @@ function words(input){
       result[word[i]] = count;
     }
     return result;
-  }
-
-
 }
 
 module.exports = words;
