@@ -2,7 +2,8 @@
 function words(input){
   var result = {};
 
-  var word = input.split(" ") || input.split("\n");
+  input = input.replace("\n", " ");
+  var word = input.split(" ");
 
   // if(word.length <= 1){
   //   word = word[0];
