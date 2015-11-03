@@ -21,5 +21,12 @@ PhoneNumber.prototype.number = function() {
   return cleanNum;
 };
 
+PhoneNumber.prototype.areaCode = function() {
+  var cleanNum = this.num.replace(/\D+/g, '');
+  if (cleanNum.length === 10){
+    return cleanNum.slice(0, 3);
+  }
+
+};
 
 module.exports = PhoneNumber;
