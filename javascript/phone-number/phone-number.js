@@ -3,8 +3,14 @@ function PhoneNumber(num){
 }
 
 PhoneNumber.prototype.number = function() {
-  var newNumber = this.num.replace(/\D+/g, '');
-  return newNumber;
+  //replaces any non digit
+  var cleanNum = this.num.replace(/\D+/g, '');
+  //if first character is 1, slice off
+    if (cleanNum.length > 10){
+      return cleanNum.slice(1);
+    } else {
+      return cleanNum;
+    }
 };
 
 
