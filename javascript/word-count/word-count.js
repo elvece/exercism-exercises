@@ -6,6 +6,7 @@ function words(input){
   var result = {};
 
   input = input.replace(/ +?/g, " ");
+  //trim white space also .trim()
   var word = input.split(" ");
 
   // if(word.length <= 1){
@@ -14,6 +15,7 @@ function words(input){
   //   return result;
   // } else {
 
+//to string for last problem
 
     for (var i = 0; i < word.length; i++) {
       var count = result[word[i]] || 0;
@@ -26,3 +28,23 @@ function words(input){
 module.exports = words;
 
 })();
+
+// average = arr.reduce(function(prev, curr){ return prev + curr;}) / arr.length
+// arr.reduce(function(prev, curr){ return prev[curr] = 1;}, {});
+// arr.reduce(function(prev, curr){ (prev[curr]) ? prev[curr]++ : prev[curr] = 1; return prev;}, {});
+
+
+
+// var arr = [11,20,89,1131];
+
+// arr.reduce(function(prev, curr, index, array){
+//   prev[curr] = array[index + 1] || array[0];
+//   return prev;
+// }, {});
+
+
+
+
+
+
+
