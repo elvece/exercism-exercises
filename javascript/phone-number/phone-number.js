@@ -5,16 +5,17 @@ function PhoneNumber(num){
 PhoneNumber.prototype.number = function() {
   //replaces any non digit
   var cleanNum = this.num.replace(/\D+/g, '');
-  //if first character is 1, slice off
-    if (cleanNum.length > 10){
+
+  while (cleanNum.length > 10){
+    //if first character is greater than 10, slice off
+    if (cleanNum.charAt(0) === "1" && cleanNum.length > 10){
       return cleanNum.slice(1);
     } else {
-      return cleanNum;
+      return '0000000000';
     }
+  }
+  return cleanNum;
 };
 
-
-
-// if (phone.charAt(3) === "-" && phone.charAt(7) === "-" && phone.length === 12) {
 
 module.exports = PhoneNumber;
