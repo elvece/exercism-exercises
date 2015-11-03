@@ -2,6 +2,7 @@ function PhoneNumber(num){
   this.num = num;
 }
 
+//REFACTOR!!!
 PhoneNumber.prototype.number = function() {
   //replaces any non digit
   var cleanNum = this.num.replace(/\D+/g, '');
@@ -26,7 +27,15 @@ PhoneNumber.prototype.areaCode = function() {
   if (cleanNum.length === 10){
     return cleanNum.slice(0, 3);
   }
+};
 
+PhoneNumber.prototype.toString = function() {
+  var cleanNum = this.num.replace(/\D+/g, '');
+  if (cleanNum.length === 10){
+    var areaCode = cleanNum.slice(0, 3);
+    var rest = cleanNum.slice(3)
+    return '(' +areaCode+ ') ' +rest+ '';
+  }
 };
 
 module.exports = PhoneNumber;
