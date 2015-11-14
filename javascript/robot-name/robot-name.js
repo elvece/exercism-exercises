@@ -15,15 +15,11 @@ function Robot(){
     for (var i = 0; i < 3; i++) {
       this.name += numbers[Math.floor(Math.random() * numbers.length)];
     }
-      usedNames.push(this.name)
+      usedNames.push(this.name);
   }
-    console.log(this.name)
-    return this.name
+    console.log(this.name);
+    return this.name;
 }
-
-
-Robot();
-console.log('done')
 
 
 module.exports = Robot;
