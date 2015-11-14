@@ -1,20 +1,29 @@
-function Robot(){
-  this.name;
-  this.usedNames = [];
+//global container for already used names
+var usedNames = [];
 
-  var num = Math.floor(Math.random() * 100);
+function Robot(){
+  this.name = 'A';
+
+  var numbers = ['1','2','3','4','5','6','7','8','9','10'];
   var letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-  var robotLetters = [];
-  var singleLetters = letters.forEach(, function(){
-    console.log(letter[num]);
-    return robotLetters.push.letter[num];
-  });
-  console.log(robotLetters);
-  name = robotLetters[1] + robotLetters[2] + num + num + num;
-  console.log(this.name);
-  return this.name;
+
+  while(usedNames.indexOf(this.name) === -1) {
+    for (var i = 1; i < 2; i++) {
+      this.name += letters[Math.floor(Math.random() * letters.length)]
+    }
+
+    for (var i = 0; i < 3; i++) {
+      this.name += numbers[Math.floor(Math.random() * numbers.length)]
+    }
+      usedNames.push(this.name)
+  }
+    console.log(this.name)
+    return this.name
 }
+
 
 Robot();
 console.log('done')
+
+
 module.exports = Robot;
