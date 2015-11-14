@@ -17,9 +17,11 @@ function Robot(){
     }
       usedNames.push(this.name);
   }
-    console.log(this.name);
     return this.name;
 }
 
+Robot.prototype.reset = function() {
+  this.name = '';
+};
 
 module.exports = Robot;
