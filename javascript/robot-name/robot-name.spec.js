@@ -42,7 +42,7 @@ describe('Robot', function() {
     expect(originalName).not.toEqual(newName);
   });
 
-  xit('should set a unique name after reset', function() {
+  it('should set a unique name after reset', function() {
     var i,
         numResets = 10000,
         usedNames = {};
