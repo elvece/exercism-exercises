@@ -34,7 +34,7 @@ describe('Robot', function() {
     expect(Object.keys(usedNames).length).toEqual(numRobots);
   });
 
-  xit('is able to reset the name', function() {
+  it('is able to reset the name', function() {
     var originalName = robot.name;
     robot.reset();
     var newName = robot.name;

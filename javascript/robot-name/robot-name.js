@@ -25,15 +25,13 @@ Robot.prototype.createName = function() {
     if(usedNames.indexOf(robot) === -1){
       usedNames.push(robot);
     return robot;
-
     }
   }
 };
 
-// Robot.prototype.reset = function() {
-//   var newRobot = Robot();
-//   return newRobot.name;
-// };
+Robot.prototype.reset = function() {
+  this.name = Robot.prototype.createName();
+};
 
 module.exports = Robot;
 
