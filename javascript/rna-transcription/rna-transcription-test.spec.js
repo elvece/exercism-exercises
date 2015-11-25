@@ -15,7 +15,7 @@ describe('toRna()', function() {
     expect(dnaTranscriber.toRna('A')).toEqual('U');
   });
 
-  xit('transcribes thymine to adenine', function() {
+  it('transcribes thymine to adenine', function() {
     expect(dnaTranscriber.toRna('T')).toEqual('A');
   });
 
