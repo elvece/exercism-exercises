@@ -7,7 +7,9 @@
 function DnaTranscriber(){}
 
 DnaTranscriber.prototype.toRna = function(nuc) {
-
+  if(nuc === 'C'){
+    return nuc = 'G'
+  }
 };
 
 module.exports = DnaTranscriber;
