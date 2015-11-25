@@ -8,7 +8,16 @@ function DnaTranscriber(){}
 
 DnaTranscriber.prototype.toRna = function(nuc) {
   if(nuc === 'C'){
-    return nuc = 'G'
+    return nuc = 'G';
+  }
+  if(nuc === 'G'){
+    return nuc = 'C';
+  }
+  if(nuc === 'T'){
+    return nuc = 'A';
+  }
+  if(nuc === 'A'){
+    return nuc = 'U';
   }
 };
 
