@@ -30,26 +30,30 @@ var Raindrops = function() {};
 Raindrops.prototype.convert = function(input) {
   var primes = getPrimeFactors(input);
   // console.log('primes: '+primes)
+
   var output = "";
-  // for (var i = 0; i < primes.length; i++) {
-  //   if (primes[i] === 3){
-  //     output += 'Pling';
-  //   }
-  //   if (primes[i] === 5){
-  //     output += 'Plang';
-  //   }
-  //   if (primes[i] === 7){
-  //     output += 'Plong';
-  //   } else {
+  for (var i = 0; i < primes.length; i++) {
+    // console.log('primes[i]: '+primes[i])
+    if (primes[i] === 3){
+      output += 'Pling';
+    }
+    else if (primes[i] === 5){
+      output += 'Plang';
+    }
+    else if (primes[i] === 7){
+      output += 'Plong';
+    }
+    else {
+      console.log('input: '+input)
       output += input.toString();
-    // }
-  // }
+    }
+  }
   console.log('output: '+output)
   return output;
 };
 
 //testing
-var drops = new Raindrops();
-console.log(drops.convert(1755));
+// var drops = new Raindrops();
+// console.log(drops.convert(1755));
 
 module.exports = Raindrops;
