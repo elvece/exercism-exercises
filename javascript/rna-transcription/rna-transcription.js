@@ -1,8 +1,3 @@
-// Write a program that, given a DNA strand, returns its RNA complement (per RNA transcription).
-// * `G` -> `C`
-// * `C` -> `G`
-// * `T` -> `A`
-// * `A` -> `U`
 
 function DnaTranscriber(){}
 
@@ -24,7 +19,7 @@ DnaTranscriber.prototype.toRna = function(dna) {
     if(arr[i] === 'x'){
       arr[i] = 'G';
     }
-
+    //another thought, but not working?
     // arr[arr[i].indexOf('A')] ='U';
     // arr[arr[i].indexOf('T')] ='A';
     // arr[arr[i].indexOf('C')] ='x';
