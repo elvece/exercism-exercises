@@ -35,4 +35,27 @@ DnaTranscriber.prototype.toRna = function(dna) {
     return rna;
 };
 
+DnaTranscriber.prototype.toDna = function(rna) {
+  var arr = rna.split("");
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i] === 'A'){
+      arr[i] = 'T';
+    }
+    if(arr[i] === 'U'){
+      arr[i] = 'A';
+    }
+    if(arr[i] === 'G'){
+      arr[i] = 'x';
+    }
+    if(arr[i] === 'C'){
+      arr[i] = 'G';
+    }
+    if(arr[i] === 'x'){
+      arr[i] = 'C';
+    }
+  }
+    var dna = arr.join("");
+    return dna;
+};
+
 module.exports = DnaTranscriber;
