@@ -1,9 +1,10 @@
 //factor number
-//if factor contains 3 = pling
-//if factor contains 5 = plang
-//if factor contains 7 = plong
+//if factor contains 3 = Pling
+//if factor contains 5 = Plang
+//if factor contains 7 = Plong
 //if none, digit as string
 
+//helper function
 function getPrimeFactors(num) {
     num = Math.floor(num);
     var root, factors = [], x, sqrt = Math.sqrt, doLoop = 1 < num;
@@ -22,25 +23,28 @@ function getPrimeFactors(num) {
     return factors;
 }
 
-console.log(getPrimeFactors(10));
+// console.log('factors function: '+getPrimeFactors(10));
 
 var Raindrops = function() {};
 
 Raindrops.prototype.convert = function(input) {
   var primes = getPrimeFactors(input);
+  var output = "";
   for (var i = 0; i < primes.length; i++) {
     if (primes[i] === 3){
-      return 'Pling';
+      output += 'Pling';
     }
     if (primes[i] === 5){
-      return 'Plang';
+      output += 'Plang';
     }
     if (primes[i] === 7){
-      return 'Plong';
+      output += 'Plong';
     } else {
-      return input.toString();
+      output = input.toString();
     }
   }
+  console.log('output: '+output)
+  return output;
 };
 
 //testing
