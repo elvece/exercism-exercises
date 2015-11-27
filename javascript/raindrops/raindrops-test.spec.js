@@ -7,7 +7,7 @@ describe('Raindrops', function() {
     expect(drops.convert(1)).toEqual('1');
   });
 
-  xit('converts 3', function() {
+  it('converts 3', function() {
     expect(drops.convert(3)).toEqual('Pling');
   });
 
