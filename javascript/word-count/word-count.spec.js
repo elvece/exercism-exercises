@@ -51,7 +51,7 @@ describe('words()', function() {
     expect(words('hello  world')).toEqual(expectedCounts);
   });
 
-  xit('does not count leading or trailing whitespace', function() {
+  it('does not count leading or trailing whitespace', function() {
     var expectedCounts = { Introductory: 1, Course: 1 };
     expect(words('\t\tIntroductory Course      ')).toEqual(expectedCounts);
   });
