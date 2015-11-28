@@ -46,7 +46,7 @@ describe('words()', function() {
     expect(words('hello\tworld')).toEqual(expectedCounts);
   });
 
-  xit('counts multiple spaces as one', function() {
+  it('counts multiple spaces as one', function() {
     var expectedCounts = { hello: 1, world: 1 };
     expect(words('hello  world')).toEqual(expectedCounts);
   });

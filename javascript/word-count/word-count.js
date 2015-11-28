@@ -4,11 +4,9 @@
 
 function words(input){
   var result = {};
-  console.log(input)
-  input = input.replace(/[\n\t]/g, " ");
-  //trim white space also .trim()
+  input = input.replace(/\s+/g, " ").trim();
+
   var word = input.split(" ");
-  console.log(word)
   // if(word.length <= 1){
   //   word = word[0];
   //   result.word = 1;
@@ -20,7 +18,6 @@ function words(input){
     for (var i = 0; i < word.length; i++) {
       var count = result[word[i]] || 0;
       count ++;
-      console.log(count)
       result[word[i]] = count;
     }
 
