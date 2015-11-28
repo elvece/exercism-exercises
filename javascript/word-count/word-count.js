@@ -4,11 +4,11 @@
 
 function words(input){
   var result = {};
-
-  input = input.replace(/ +?/g, " ");
+  console.log(input)
+  input = input.replace(/[\n\t]/g, " ");
   //trim white space also .trim()
   var word = input.split(" ");
-
+  console.log(word)
   // if(word.length <= 1){
   //   word = word[0];
   //   result.word = 1;
@@ -20,9 +20,19 @@ function words(input){
     for (var i = 0; i < word.length; i++) {
       var count = result[word[i]] || 0;
       count ++;
+      console.log(count)
       result[word[i]] = count;
     }
+
     return result;
+
+  // var answer = word.reduce(function(prev, curr, index, array){
+  //   prev[curr] = array[index + 1] || array[0];
+  //   return prev;
+  // }, {});
+  // console.log(answer)
+
+  // return answer;
 }
 
 module.exports = words;
