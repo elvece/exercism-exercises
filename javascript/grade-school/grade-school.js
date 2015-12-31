@@ -11,7 +11,9 @@ function School(){
     } else {
       roster[grade].push(name);
     }
-
+  };
+  this.grade = function(grade){
+    return roster[grade].sort();
   };
 }
 module.exports = School;
