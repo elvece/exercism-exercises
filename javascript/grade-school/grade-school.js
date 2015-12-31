@@ -8,7 +8,10 @@ function School(){
       var arr = [];
       roster[grade] = arr;
       arr.push(name);
+    } else {
+      roster[grade].push(name);
     }
+
   };
 }
 module.exports = School;
