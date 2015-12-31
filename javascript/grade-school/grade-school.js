@@ -10,6 +10,7 @@ function School(){
       arr.push(name);
     } else {
       roster[grade].push(name);
+      roster[grade].sort();
     }
   };
   this.grade = function(grade){
