@@ -13,7 +13,12 @@ function School(){
     }
   };
   this.grade = function(grade){
-    return roster[grade].sort();
+    var gradeRoster;
+    if (!roster.hasOwnProperty(grade)){
+      roster[grade] = [];
+      gradeRoster = roster[grade];
+    } else gradeRoster = roster[grade].sort();
+    return gradeRoster;
   };
 }
 module.exports = School;
