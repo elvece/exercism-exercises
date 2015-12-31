@@ -1,7 +1,14 @@
 function School(){
+  var roster = {};
   this.roster = function(){
-    var roster = {};
     return roster;
+  };
+  this.add = function(name, grade){
+    if (!roster.hasOwnProperty(grade)){
+      var arr = [];
+      roster[grade] = arr;
+      arr.push(name);
+    }
   };
 }
 module.exports = School;
