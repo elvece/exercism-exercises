@@ -13,7 +13,7 @@ function SecretHandshake(number){
 }
 
 SecretHandshake.prototype.commands = function() {
-  var command = [];
+  var commands = ['wink', 'double blink', 'close your eyes', 'jump'];
   var num  = +toBinary(this.number);
   if (num === 1){
     command.push('wink');
