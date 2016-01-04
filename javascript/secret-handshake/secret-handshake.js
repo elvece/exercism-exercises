@@ -1,4 +1,8 @@
 
+function toBinaryHelper(num){
+  return (num >>> 0).toString(2);
+}
+
 function SecretHandshake(number){
  this.number = number;
 }
