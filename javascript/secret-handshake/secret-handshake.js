@@ -14,10 +14,12 @@ function SecretHandshake(number){
 
 SecretHandshake.prototype.commands = function() {
   var command = [];
-  toBinary(this.number);
-  console.log(this.number);
-  if (this.number === 1){
+  var num  = +toBinary(this.number);
+  if (num === 1){
     command.push('wink');
+  }
+  if (num === 10){
+    command.push('double blink');
   }
   return command;
 };
