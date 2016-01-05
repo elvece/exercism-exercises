@@ -15,7 +15,11 @@ function SecretHandshake(handshake){
     for (var i = 0; i < allCommands.length; i++) {
       var findCommand = (handshake & Math.pow(2,i));
       if (findCommand)
-      finalHandshake.push(allCommands[i]);
+        if(allCommands[i] === 'reverse'){
+          finalHandshake.reverse();
+        } else {
+          finalHandshake.push(allCommands[i]);
+        }
     }
     return finalHandshake;
   };
