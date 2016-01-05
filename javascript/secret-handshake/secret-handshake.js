@@ -7,6 +7,9 @@
 
 function SecretHandshake(handshake){
   var allCommands = ['wink', 'double blink', 'close your eyes', 'jump', 'reverse'];
+  if (typeof handshake !== 'number'){
+    throw 'Handshake must be a number';
+  }
   this.commands = function(){
     return this.calculateHandshake(handshake);
   };
