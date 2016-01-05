@@ -1,24 +1,15 @@
-//use OOP?
 
-function compute(originalStrand, mutatedStrand){
-  //split each string into an array
-  //compare each index in first array to second array
-  //if differnce, add to counter
+function Hamming(){
 
-  //return counter number
-  var counter = 0;
-  //splits into an array
-  var workingOriginal = originalStrand.split("");
-  var workingMutated = mutatedStrand.split("");
-
-  for (var i = 0; i < workingOriginal.length; i++) {
-    for (var j = 0; j < workingMutated.length; j++) {
-      if (workingOriginal[i] !== workingMutated[j])
-        counter ++;
-    }
-  }
-  return counter;
+  this.compute = function(originalStrand, mutatedStrand){
+    var ham,
+        workingOriginal = originalStrand.split(""),
+        workingMutated = mutatedStrand.split(""),
+        diff = workingOriginal.filter(function(i) {return workingMutated.indexOf(i) < 0;});
+        ham = diff.length;
+        return ham;
+  };
 }
 
-module.exports = compute;
+module.exports = Hamming;
 //compare the length of each strands
