@@ -15,11 +15,11 @@ describe('Hamming', function () {
     expect(hamming.compute('AG','CT')).toEqual(2);
   });
 
-  xit('small hamming distance', function () {
+  it('small hamming distance', function () {
     expect(hamming.compute('AT','CT')).toEqual(1);
   });
 
-  xit('small hamming distance in longer strand', function () {
+  it('small hamming distance in longer strand', function () {
     expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
