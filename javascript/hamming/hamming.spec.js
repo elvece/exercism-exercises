@@ -23,11 +23,11 @@ describe('Hamming', function () {
     expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xit('large hamming distance', function () {
+  it('large hamming distance', function () {
     expect(hamming.compute('GATACA', 'GCATAA')).toEqual(4);
   });
 
-  xit('hamming distance in very long strand', function () {
+  it('hamming distance in very long strand', function () {
     expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
   });
 

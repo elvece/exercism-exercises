@@ -2,14 +2,15 @@
 function Hamming(){
 
   this.compute = function(originalStrand, mutatedStrand){
-    var ham,
-        workingOriginal = originalStrand.split(""),
-        workingMutated = mutatedStrand.split(""),
-        diff = workingOriginal.filter(function(i) {return workingMutated.indexOf(i) < 0;});
-        ham = diff.length;
-        return ham;
+    var length = Math.min(mutatedStrand.length, originalStrand.length),
+        count = 0;
+        for (var i = 0; i < length; i++) {
+          if(mutatedStrand[i] !== originalStrand[i]){
+            count ++;
+          }
+        }
+        return count;
   };
 }
 
 module.exports = Hamming;
-//compare the length of each strands
