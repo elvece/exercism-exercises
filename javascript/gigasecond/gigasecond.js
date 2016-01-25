@@ -6,12 +6,15 @@ function Gigasecond(date) {
   this.birthday = date;
 }
 
-
 Gigasecond.prototype.date= function() {
-  //return date of your gs anniversary
+  var dayInSeconds = 24 * 60 * 60,
+      gigasecond = (10*10*10*10*10*10*10*10*10),
+      gsInDays = parseInt(gigasecond / dayInSeconds),
+      gsAnni = this.birthday * gsInDays;
+      //how do you split apart the data object to add days to it?
+      console.log(gsAnni)
+  return gsAnni;
 
 };
 
-//calculate how many seconds from the entered date
-//convert date into seconds
-//
+module.exports = Gigasecond;
