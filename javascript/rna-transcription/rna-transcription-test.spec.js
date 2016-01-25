@@ -25,7 +25,7 @@ describe('toRna()', function() {
   });
 });
 
-describe('toDna()', function() {
+xdescribe('toDna()', function() {
   it('transcribes cytosine to guanine', function() {
     expect(dnaTranscriber.toDna('C')).toEqual('G');
   });
